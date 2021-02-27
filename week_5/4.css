@@ -1,0 +1,53 @@
+body{
+    background-color: aliceblue;
+}
+
+.navbar {
+	opacity: 0.8;
+	border-bottom: 1px solid #fff;
+    
+}
+table{ 
+  margin-top:50px;
+  margin-left:50px;
+  width: 120px;
+
+}
+iframe{
+    width:50%; height:430px;
+    margin-top:-290px;
+    float:right;
+    margin-right:40px;
+}
+
+h4{
+    margin-left:50px;
+   margin-top:110px;
+}
+.yazi2{
+    float:right;
+    margin-top: -150px;
+    margin-right: 320px;
+} 
+#kaydol{
+    background-color: white;
+        color: black;
+        border: 2px solid #475053;
+        padding: 16px 32px;
+        margin-left: 20%;
+        transition-duration: 0.4s;
+        margin-bottom: 30px;
+        margin-top:30px;
+}
+#kaydol:hover {
+    background-color: #555555;
+    color: white;
+}
+.iletisim{
+   float:right;
+   margin-top:460px;
+   margin-right: -90px;
+}
+footer{
+    margin-top:550px;
+}

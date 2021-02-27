@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bisiklet</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="1.css">
+</head>
+
+<body>
+
+    <nav class="navbar bg-dark navbar-expand-sm navbar-dark fixed-top">
+        <div class="container">
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="1.html" class="nav-link active">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="2.html" class="nav-link active">Donanım</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="3.html" class="nav-link active">Aksesuar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="4.html" class="nav-link active">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <h1>Bisiklet Nedir?</h1>
+    <div class="paragraf1">
+        <img src="img/bike1.jpg" class="foto1">
+        <p>Bisiklet, artık gelişen teknoloji sayesinde büyük gelişmeler kaydetmiş çok yönlü mucizevi bir araç. 21
+            vitesli, otomatik vitesli, elektrik motorlu, fonksiyonel ve hafif bisikletlerle bisiklet sürmek daha da
+            keyifli hale geldi.
+
+            Bugün bisiklet, gelişmiş ülkelerde çevreyi, insan sağlığını, ekonomiyi, atmosferi korumanın en önemli
+            araçlarından biri haline geldi. Artık modern yaşamda bir kısa mesafe (5-6 km) ulaşım aracı olarak kabul
+            ediliyor.
+
+            Bisiklet ya da popüler olmayan eski adıyla velespit, motorsuz veya elektrik motorlu, iki veya üç tekerlekli,
+            pedallı, insan gücü veya elektrik ile ilerleyen bir ulaşım aracıdır. Ulaşım ve eğlencenin yanı sıra bisiklet
+            sporunda da kullanılır. </p>
+
+    </div>
+
+
+    <div class="sırala">
+        <h4>Bisiklet Türleri</h4>
+        <p>Bisiklet türleri en basit şekilde üç temel grupta sıralanabilir. Bunlar <b>şehir bisikletleri, dağ
+                bisikletleri ve yol-yarış bisikletleridir.</b> Doğru bir bisiklet seçiminde hangi bisiklete ihtiyaç
+            duyulduğu, bisikletin ne amaçla kullanılacağı önemlidir.</p>
+        <ul>
+            <li>
+                <p>Dağ bisikletleri stabilize ve toprak yollarda, ormanlarda kullanıma uygundur.</p>
+            </li>
+            <li>
+                <p>Yol-yarış bisikletleri düzgün, asfalt yollarda ve yaprış pistlerinde kullanılır. Fixie, triatlon
+                    bisikletleri ve Zamana karşı bisikletleri de yarış bisikletleridir.</p>
+            </li>
+            <li>
+                <p>Şehir bisikletleri asfalt, düzgün zeminlerde, stabilize yollarda kullanılabilir. Tur (trekking)
+                    bisikleti, katlanır bisikletler ve single speed bisikletler de şehir bisikletleridir.​</p>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="alert alert-success alert alert-info" id="myAlert">
+            <a href="#" class="close">&times;</a>
+            Yeni yazılanlardan haberdar olmak için <a href=4.html><strong>kaydolun!</strong></a>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".close").click(function () {
+                $("#myAlert").alert("close");
+            });
+        });
+    </script>
+
+    <footer class="py-5 bg-dark text-white text-center">
+        Tüm Hakları Saklıdır &copy; | 2021
+    </footer>
+
+</body>
+
+</html>

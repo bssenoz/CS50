@@ -1,0 +1,33 @@
+body{
+    background-color: aliceblue;
+}
+
+.navbar {
+	opacity: 0.8;
+	border-bottom: 1px solid #fff;
+    
+}
+.paragraf{
+    width: 80%;
+    margin:auto;
+    margin-top:2%;
+}
+.foto3{
+    float:right;
+    padding:0 5px 5px 0;
+    width:50%;
+    height:50%;
+}
+h4{
+    margin-top:90px;
+    margin-left:60px;
+}
+
+iframe{
+    width:40%;  
+    margin-left: 30%;
+    margin-top:5%;
+    margin-bottom:5%;
+}
+
+
