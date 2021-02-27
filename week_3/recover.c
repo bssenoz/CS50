@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <cs50.h>
+
+#define BLOCK_SIZE 512
+
+int main(int argc, char *argv[])
+{
+    if (argc != 2)
+    {
+        printf("Usage: ./recover image\n");
+        return 1;
+    }
+
+    char *infile = argv[1];
+    FILE *inptr = fopen(infile, "r");
+
+    if (infile == NULL)
+    {
+        printf("Unable to open: %s\n", infile);
+        return 1;
+    }
+
+    // Create buffer
+    unsigned char buffer[BLOCK_SIZE];
+    // File counter, initialise
+    int a = 0;
+    FILE *outptr = NULL;
+    // Check if JPEG is found
+    int jpg_found = 0; //False
+
+    //Read through the whole block, repeat for all files
+    while (fread(&buffer, BLOCK_SIZE, 1, inptr) == 1)
+    {
+        //if start of new JPEG
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+        {
+            //if JPEG has been found
+            if (jpg_found == 1)
+            {
+                // Start of an image has been found, so close current image
+                fclose(outptr);
+            }
+            //if first JPEG, create a new first file and write in it
+            else
+            {
+                //new JPEG discovered and we can write on file
+                jpg_found = 1;
+            }
+            char filename[8]; //example: 001.jpg\0
+            sprintf(filename, "%03i.jpg", a);
+            outptr = fopen(filename, "w");
+            a++;
+        }
+        if (jpg_found == 1) //once new JPEGS are found
+        {
+            //copy over the blocks from buffer into new file
+            fwrite(&buffer, BLOCK_SIZE, 1, outptr);
+        }
+    }
+   
+    fclose(outptr);
+
+    fclose(inptr);
+ 
+    return 0;
+}
